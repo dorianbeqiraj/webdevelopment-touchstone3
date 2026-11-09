@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrightPath Tutoring Services - Contact Us</title>
+</head>
+<body>
+    <header>
+        <h1>BrightPath Tutoring Services</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Our Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Schedule a Free Consultation</h2>
+            <p>Please fill out the form below to register for a tutoring session or ask a question.</p>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Student & Contact Details</legend>
+
+                    <p>
+                        <label for="fullname">Full Name:</label><br>
+                        <input type="text" id="fullname" name="fullname" required pattern="[A-Za-z ]{3,50}">
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+                    </p>
+
+                    <p>
+                        <label for="subject">Subject Needed:</label><br>
+                        <select id="subject" name="subject" required>
+                            <option value="">-- Please choose an option --</option>
+                            <option value="math">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="english">English</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="message">Additional Details:</label><br>
+                        <textarea id="message" name="message" rows="4" cols="40"></textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Submit Request</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 BrightPath Tutoring Services. All rights reserved.</p>
+    </footer>
+</body>
+</html>
