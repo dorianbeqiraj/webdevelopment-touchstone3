@@ -1,0 +1,226 @@
+/* ==========================================
+   BRIGHTPATH TUTORING SERVICES - STYLESHEET
+   Visual Design & Responsive Layout (Touchstone 3)
+   ========================================== */
+
+/* 1. Global Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #F7FAFC; /* Off-White background for comfortable reading */
+    color: #2D3748; /* Dark Slate text for high contrast */
+}
+
+/* 2. Header & Branding */
+header {
+    background-color: #1A365D; /* Deep Navy primary brand color */
+    color: #FFFFFF;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #E2E8F0;
+    margin-bottom: 1rem;
+}
+
+/* 3. Navigation Bar (Mobile-First: Vertical Stack) */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: #2B6CB0;
+    border-radius: 4px;
+    display: block;
+    text-align: center;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #D69E2E; /* Warm Gold accent color on hover */
+    color: #1A365D;
+}
+
+/* 4. Main Content Layout & Typography */
+main {
+    padding: 1.5rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #1A365D;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #E2E8F0;
+    padding-bottom: 0.4rem;
+}
+
+h3 {
+    color: #2B6CB0;
+    font-size: 1.15rem;
+    margin: 1rem 0 0.5rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* 5. Media & Figures */
+img, picture img, video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 1rem 0;
+}
+
+figure {
+    background-color: #EDF2F7;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #4A5568;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* 6. Form Styling (contact.html) */
+fieldset {
+    border: 1px solid #CBD5E0;
+    border-radius: 6px;
+    padding: 1.2rem;
+    background-color: #F7FAFC;
+}
+
+legend {
+    font-weight: bold;
+    color: #1A365D;
+    padding: 0 0.5rem;
+}
+
+label {
+    font-weight: bold;
+    color: #2D3748;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid #CBD5E0;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #D69E2E;
+    border-color: #D69E2E;
+}
+
+button[type="submit"] {
+    background-color: #D69E2E; /* Warm Gold action button */
+    color: #1A365D;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #B7791F;
+    color: #FFFFFF;
+}
+
+/* 7. Footer */
+footer {
+    background-color: #1A365D;
+    color: #E2E8F0;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* ==========================================
+   8. RESPONSIVE DESIGN (Media Queries)
+   Desktop & Tablet Layout (768px and up)
+   ========================================== */
+@media (min-width: 768px) {
+    /* Horizontal Navigation Bar */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        display: inline-block;
+    }
+
+    /* Content Layout Adjustments */
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Side-by-side card sections when using multiple articles */
+    main section article {
+        background-color: #F7FAFC;
+        padding: 1rem;
+        border-radius: 6px;
+        margin-bottom: 1rem;
+        border-left: 4px solid #2B6CB0;
+    }
+
+    /* Submit button auto width on large screens */
+    button[type="submit"] {
+        width: auto;
+    }
+}
