@@ -1,6 +1,6 @@
 /* ==========================================
    BRIGHTPATH TUTORING SERVICES - STYLESHEET
-   Visual Design & Responsive Layout (Touchstone 3)
+   Visual Design & Responsive Layout (Touchstone 3 & 4)
    ========================================== */
 
 /* 1. Global Reset & Base Styles */
@@ -88,7 +88,7 @@ h2 {
 h3 {
     color: #2B6CB0;
     font-size: 1.15rem;
-    margin: 1rem 0 0.5rem 0;
+    margin: 0.5rem 0;
 }
 
 p {
@@ -119,7 +119,11 @@ figcaption {
     font-style: italic;
 }
 
-/* 6. Form Styling (contact.html) */
+/* 6. Form Styling (contact.html & index.html) */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
 fieldset {
     border: 1px solid #CBD5E0;
     border-radius: 6px;
@@ -136,6 +140,7 @@ legend {
 label {
     font-weight: bold;
     color: #2D3748;
+    display: block;
 }
 
 input[type="text"],
@@ -159,7 +164,8 @@ textarea:focus {
     border-color: #D69E2E;
 }
 
-button[type="submit"] {
+button[type="submit"],
+.submit-btn {
     background-color: #D69E2E; /* Warm Gold action button */
     color: #1A365D;
     font-weight: bold;
@@ -169,14 +175,97 @@ button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
+    margin-top: 0.5rem;
 }
 
-button[type="submit"]:hover {
+button[type="submit"]:hover,
+.submit-btn:hover {
     background-color: #B7791F;
     color: #FFFFFF;
 }
 
-/* 7. Footer */
+/* ==========================================
+   7. TOUCHSTONE 4: INTERACTIVE STYLES
+   ========================================== */
+
+/* Grid Layout for Dynamic Tutoring Sessions */
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.2rem 0;
+}
+
+/* Individual Class Card */
+.class-card {
+    background-color: #F7FAFC;
+    border: 1px solid #E2E8F0;
+    border-left: 4px solid #2B6CB0;
+    padding: 1rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.class-card p {
+    font-size: 0.95rem;
+    color: #4A5568;
+    margin-bottom: 1rem;
+}
+
+/* Favorite Button Styling */
+.fav-btn {
+    background-color: #2B6CB0;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.fav-btn:hover {
+    background-color: #1A365D;
+}
+
+/* Saved Favorites Container Box */
+.favorites-box {
+    background-color: #EDF2F7;
+    border: 1px dashed #CBD5E0;
+    border-left: 4px solid #D69E2E;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.favorites-box h4 {
+    color: #1A365D;
+    margin-bottom: 0.5rem;
+}
+
+.favorites-box ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+
+.favorites-box li {
+    margin-bottom: 0.3rem;
+    color: #2D3748;
+}
+
+/* Validation Error Messages */
+.error-msg {
+    color: #E53E3E; /* Bright red for accessibility */
+    font-size: 0.88rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 0.3rem;
+}
+
+/* 8. Footer */
 footer {
     background-color: #1A365D;
     color: #E2E8F0;
@@ -187,7 +276,7 @@ footer {
 }
 
 /* ==========================================
-   8. RESPONSIVE DESIGN (Media Queries)
+   9. RESPONSIVE DESIGN (Media Queries)
    Desktop & Tablet Layout (768px and up)
    ========================================== */
 @media (min-width: 768px) {
@@ -220,7 +309,8 @@ footer {
     }
 
     /* Submit button auto width on large screens */
-    button[type="submit"] {
+    button[type="submit"],
+    .submit-btn {
         width: auto;
     }
 }
