@@ -37,10 +37,47 @@
             <p>Our experienced tutors help students build confidence and improve their grades through step-by-step guidance.</p>
             <img src="classroom.jpg" alt="Group of students studying together in a modern tutoring center.">
         </section>
+
+        <!-- TOUCHSTONE 4: Interactive Feature Section -->
+        <section class="interactive-section">
+            <h2>Explore & Save Our Tutoring Sessions</h2>
+            <p>Select the tutoring subjects you are interested in and save them to your personal list:</p>
+            
+            <!-- Dynamic Class/Session Grid -->
+            <div id="class-list-container" class="class-grid"></div>
+            
+            <!-- Saved Favorites Container -->
+            <div id="favorites-container" class="favorites-box"></div>
+        </section>
+
+        <!-- TOUCHSTONE 4: Contact Form with Validation -->
+        <section class="form-section">
+            <h2>Get in Touch</h2>
+            <p>Have questions or want to schedule a lesson? Fill out the form below:</p>
+
+            <form id="contact-form" novalidate>
+                <div class="form-group">
+                    <label for="username">Full Name:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your full name">
+                    <span id="name-error" class="error-msg" style="color: red; display: block; font-size: 0.9em; margin-top: 4px;"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="useremail">Email Address:</label>
+                    <input type="email" id="useremail" name="useremail" placeholder="Enter your email address">
+                    <span id="email-error" class="error-msg" style="color: red; display: block; font-size: 0.9em; margin-top: 4px;"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 BrightPath Tutoring Services. All rights reserved.</p>
     </footer>
+
+    <!-- TOUCHSTONE 4: Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>
