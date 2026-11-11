@@ -1,9 +1,9 @@
-// 1. DATA STRUCTURES (Array of Objects - Meets requirement for 2 Data Structures)
+// 1. DATA STRUCTURES (Array of Objects for Tutoring Sessions)
 const availableClasses = [
-    { id: 1, name: "Morning Yoga & Stretch", category: "Wellness", duration: "45 mins" },
-    { id: 2, name: "HIIT Cardio Blast", category: "Fitness", duration: "60 mins" },
-    { id: 3, name: "Full Body Strength", category: "Gym", duration: "50 mins" },
-    { id: 4, name: "Evening Pilates", category: "Wellness", duration: "45 mins" }
+    { id: 1, name: "Algebra & Geometry Prep", category: "Math", duration: "60 mins" },
+    { id: 2, name: "Biology & Chemistry Basics", category: "Science", duration: "45 mins" },
+    { id: 3, name: "Essay Writing & Literature", category: "English", duration: "50 mins" },
+    { id: 4, name: "SAT & Exam Preparation", category: "Test Prep", duration: "60 mins" }
 ];
 
 let savedFavorites = [];
@@ -26,7 +26,7 @@ function renderClassList() {
         const card = document.createElement("div");
         card.className = "class-card";
         
-        // Check if the current class is already saved as a favorite
+        // Check if the current session is already saved as a favorite
         const isSaved = savedFavorites.some(fav => fav.id === item.id);
         
         card.innerHTML = `
@@ -63,11 +63,11 @@ function renderFavoritesList() {
     if (!favContainer) return;
 
     if (savedFavorites.length === 0) {
-        favContainer.innerHTML = "<p>No favorite classes saved yet.</p>";
+        favContainer.innerHTML = "<p>No favorite tutoring sessions saved yet.</p>";
         return;
     }
 
-    favContainer.innerHTML = "<h4>Your Saved Favorites:</h4><ul>" + 
+    favContainer.innerHTML = "<h4>Your Saved Sessions:</h4><ul>" + 
         savedFavorites.map(item => `<li>${item.name} (${item.duration})</li>`).join('') + 
         "</ul>";
 }
@@ -107,4 +107,25 @@ function setupFormValidation() {
             nameError.textContent = "Please enter your name.";
             isValid = false;
         } else if (nameInput.value.trim().length < 3) {
-            name
+            nameError.textContent = "Name must be at least 3 characters long.";
+            isValid = false;
+        }
+
+        // Check 2: Email Format Validation
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailInput.value.trim() === "") {
+            emailError.textContent = "Please enter your email address.";
+            isValid = false;
+        } else if (!emailPattern.test(emailInput.value.trim())) {
+            emailError.textContent = "Please enter a valid email address (e.g. name@example.com).";
+            isValid = false;
+        }
+
+        // Prevent submission if form is invalid
+        if (!isValid) {
+            event.preventDefault();
+        } else {
+            alert("Form submitted successfully!");
+        }
+    });
+}
